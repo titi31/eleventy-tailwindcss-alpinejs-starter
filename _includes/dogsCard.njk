@@ -1,0 +1,28 @@
+{% include 'layout.njk' %}
+
+<ul>{%- for dogsCard in collections.dogsCard -%}
+
+
+
+
+<figure class="flex  rounded-xl p-8 md:p-0 bg-gray-500">
+  <img class="flex-none w-32 h-32 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="{{dogsCard.data.photo}}" alt="" width="384" height="512">
+  <div class="flex-auto pt-6 md:p-8 text-center md:text-left space-y-4">
+     <li > {{ dogsCard.data.title }}</li>
+    <blockquote>
+      <p class="text-lg font-semibold">
+         {{dogsCard.data.description}}
+      </p>
+    </blockquote>
+    <figcaption class="font-medium">
+      <div class="text-cyan-600">
+        Severine hoareau
+      </div>
+      <div class="text-gray-500">
+        prix: {{dogsCard.data.prix}} euro
+      </div>
+    </figcaption>
+  </div>
+</figure>
+  <div class="w-32 h-12 md:w-48"></div>
+{%- endfor -%}</ul>

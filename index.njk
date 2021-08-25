@@ -1,13 +1,12 @@
-{% extends "_includes/default.njk" %}
 
-{% block title %}It does work{% endblock %}
+{# This page is built with nunjucks! #}
 
-{% block content %}
-  <div class="fixed inset-0 flex justify-center items-center">
-    <div>
-      <span class="text-change">Good design</span><br/>
-      <span class="change">is<br/>as little design<br/>as possible</span><br/>
-      <span x-data="{message:'🤖 Hello World 🤓'}" x-text="message"></span>
-    </div>
-  </div>
+{% set title = 'Home' %}
+{% extends "layout.njk" %}
+
+
+{% block body %}
+  <main class="container py-8">
+    <h1 class="text-[62px]">This is the {{ title | lower }} page.</h1>
+  </main>
 {% endblock %}
